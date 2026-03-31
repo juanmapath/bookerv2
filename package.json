@@ -21,11 +21,17 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "lightningcss": "^1.32.0",
     "picomatch": "^4.0.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "engines": {
     "node": ">=22.13.1"
+  },
+  "optionalDependencies": {
+    "@next/swc-linux-x64-gnu": "^16.2.1",
+    "@next/swc-linux-x64-musl": "^16.2.1",
+    "lightningcss-linux-x64-gnu": "^1.32.0"
   }
 }
