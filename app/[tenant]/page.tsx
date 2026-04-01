@@ -10,7 +10,7 @@ export default async function TenantPage(props: {
 }) {
   const resolvedParams = await props.params;
   const searchParams = await props.searchParams;
-  
+
   const config = getTenantConfig(resolvedParams.tenant);
 
   if (!config) {
@@ -22,10 +22,10 @@ export default async function TenantPage(props: {
   return (
     <>
       <Header brand={config.brand} />
-      
-      <main className="flex-grow pt-12 pb-6 px-6 flex items-center justify-center font-body">
-        <div className="max-w-xl w-full">
-          
+
+      <main className="flex-1 pt-20 pb-6 px-6 font-body">
+        <div className="max-w-xl mx-auto">
+
 
           <div className={config.theme.components?.cardStyle || "p-5"}>
             <BookingForm config={config} prefilledWa={wa} />
