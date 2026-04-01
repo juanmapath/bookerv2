@@ -35,22 +35,22 @@ export default async function TenantLayout({
   } as React.CSSProperties;
 
   return (
-    <html lang="es" style={cssVars} className={`bg-[var(--color-background)] text-[var(--color-tertiary)] ${config.theme.hexagonPattern ? "hexagon-pattern" : ""}`}>
-      <body className="min-h-full flex flex-col">
-        <style>{`
-          /* Import Google Fonts dynamically for this tenant */
-          @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
-          
-          .font-headline { font-family: '${config.theme.fonts.headline}', serif; }
-          .font-body { font-family: '${config.theme.fonts.body}', sans-serif; }
-          .font-label { font-family: '${config.theme.fonts.label}', sans-serif; }
-        `}</style>
-        
-        {/* We can include google icons globally here */}
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
+        .font-headline { font-family: '${config.theme.fonts.headline}', serif; }
+        .font-body { font-family: '${config.theme.fonts.body}', sans-serif; }
+        .font-label { font-family: '${config.theme.fonts.label}', sans-serif; }
+      `}</style>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+      <div
+        style={cssVars}
+        className={`min-h-screen flex flex-col bg-[var(--color-background)] text-[var(--color-tertiary)] ${config.theme.hexagonPattern ? "hexagon-pattern" : ""}`}
+      >
         {children}
-      </body>
-    </html>
+      </div>
+    </>
   );
 }

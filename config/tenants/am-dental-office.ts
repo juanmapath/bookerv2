@@ -7,33 +7,33 @@ export const amDentalOfficeConfig: TenantConfig = {
     logo: "/am-do-logo.jpg",
     subtitle: "Comienza tu camino de cuidado",
     titleHtml: '',
-    subtitleHtml: '<span class="text-4xl text-[var(--color-tertiary)] font-bold">Comienza tu <br/><span class="text-[var(--color-primary)]">camino de cuidado.</span></span><br/><br/><span class="text-[var(--color-secondary)] text-sm tracking-normal normal-case">Completa el formulario de registro para programar tu próxima cita.</span>',
+    subtitleHtml: '<span class="text-xs font-label font-semibold tracking-wider text-[var(--color-primary)] mb-2 block">Portal del Paciente</span><h2 class="text-4xl md:text-5xl font-headline font-extrabold text-[var(--color-tertiary)] leading-tight">Comienza tu <br/><span class="text-[var(--color-primary)]">camino de cuidado.</span></h2><p class="mt-4 text-[var(--color-secondary)] font-body text-base">Completa el formulario de registro para programar tu próxima cita.</p>',
   },
   theme: {
     colors: {
-      "surface-dim": "#f8ebf8", // pale pink background
+      "surface-dim": "#fff3fd",
       "surface-container-lowest": "#ffffff",
-      "surface-variant": "#f4e0f4",
-      background: "#fcf4f9", // Based on screenshot background
-      outline: "#d1b3d1",
-      primary: "#7021B6", // Purple
-      "primary-dim": "#571692",
-      "on-primary": "#ffffff",
-      secondary: "#a075a0",
-      tertiary: "#511287", // Darker purple text
-      "surface-container-low": "#f6e4f6",
-      "surface-container": "#ffffff", // white cards
-      "surface-bright": "#f3e8ff", // light purple hue for active card
-      "outline-variant": "#ebd5eb",
+      "surface-variant": "#f7d0ff",
+      background: "#fff3fd",
+      outline: "#8b6c94",
+      primary: "#7f30c3",
+      "primary-dim": "#721fb6",
+      "on-primary": "#fbefff",
+      secondary: "#6e5177",    // on-surface-variant — color de labels
+      tertiary: "#3f2547",     // on-background — color de headings y texto
+      "surface-container-low": "#feebff",
+      "surface-container": "#fbdfff",
+      "surface-bright": "#fff3fd",
+      "outline-variant": "#c4a1cc",
     },
     fonts: {
-      headline: "Manrope", // Using Manrope for headline (or maybe another sans serif)
-      body: "Manrope",
-      label: "Manrope",
+      headline: "Manrope",
+      body: "Inter",
+      label: "Inter",
     },
     hexagonPattern: false, // No pattern for dental office
     components: {
-      inputStyle: "w-full bg-[var(--color-surface-container)] rounded-2xl border-0 shadow-sm focus:ring-2 focus:ring-[var(--color-primary)] text-[var(--color-tertiary)] placeholder:text-[var(--color-outline)] py-3 px-4 transition-all duration-300",
+      inputStyle: "w-full h-14 px-5 rounded-xl border-none bg-white shadow-sm focus:ring-2 focus:ring-[var(--color-primary)] focus:bg-white transition-all text-[var(--color-tertiary)] placeholder:text-[var(--color-outline-variant)]/60 [&:-webkit-autofill]:shadow-[inset_0_0_0_1000px_#ffffff] [&:-webkit-autofill]:[--webkit-text-fill-color:var(--color-tertiary)]",
       cardStyle: "bg-transparent border-none shadow-none p-0",
     }
   },
